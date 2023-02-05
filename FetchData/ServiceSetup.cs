@@ -18,7 +18,7 @@ namespace FetchData
 		public static IServiceProvider AddServices(this IServiceCollection services)
 		{
             services.AddConfigs()
-                .AddPlusProductDB()
+                .AddETHDB()
                 .AddDataHelpers()
                 .AddAutoMapper()
                 .AddHostedService()
@@ -38,7 +38,7 @@ namespace FetchData
             return services;
         }
 
-        private static IServiceCollection AddPlusProductDB(this IServiceCollection services)
+        private static IServiceCollection AddETHDB(this IServiceCollection services)
         {
             IConfiguration config = new ConfigurationBuilder()
              .AddJsonFile("appsettings.json")
